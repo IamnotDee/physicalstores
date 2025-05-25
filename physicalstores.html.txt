@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available from Major Retailers Worldwide</title>
+  <style>
+    body {
+      margin: 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .announcement {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1e90ff; /* Eye-pleasing blue */
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-top: 25px; /* Spacing to prevent overlap */
+    }
+
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-link {
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+      filter: grayscale(100%);
+    }
+
+    .logo:hover {
+      transform: scale(1.2) rotate(10deg);
+      filter: grayscale(100%) brightness(1.2);
+    }
+
+    .logo[alt="Amazon"], .logo[alt="IndieBound"] {
+      filter: none;
+    }
+
+    .logo[alt="Amazon"]:hover, .logo[alt="IndieBound"]:hover {
+      filter: brightness(1.2);
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
+
+    .logo-link:hover .tooltip {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-5px);
+    }
+
+    .tooltip.blue {
+      background: linear-gradient(135deg, #1e90ff, #00bfff); /* Blue */
+      color: white;
+    }
+
+    .tooltip.red {
+      background: linear-gradient(135deg, #ff4b4b, #ff0000); /* Red */
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">
+    Available from Major Retailers Worldwide
+  </div>
+
+  <div class="logo-container">
+    <div class="logo-row">
+      <a href="https://www.amazon.com" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_731334421c1047ff97af7270879914b3~mv2.png" alt="Amazon" class="logo">
+        <span class="tooltip blue">Amazon</span>
+      </a>
+      <a href="https://www.barnesandnoble.com" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_8199d6a975e04d4fa8c0bfb1b3c732ea~mv2.png" alt="Barnes & Noble" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://bookshop.org" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_a3cc9dc4a9684d18a04ae386cc39c097~mv2.png" alt="Bookshop" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://www.indigo.ca" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_e4936a7b316f4da5b5d2501b579aaa9d~mv2.webp" alt="Indigo" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://www.waterstones.com" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_5c9f5c0e932a4b76a3d7fe49ee388e2d~mv2.webp" alt="Waterstones" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+    </div>
+    <div class="logo-row">
+      <a href="https://www.booksamillion.com" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_af1e42d07294482d8cecd962b1ca47b8~mv2.png" alt="Books-A-Million" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://www.booktopia.com.au" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_984233a19c6d4ac790b518cd1bd877e0~mv2.png" alt="Booktopia" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://www.dymocks.com.au" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_f6017efb7d044e0bba1f6694c81be768~mv2.png" alt="Dymocks" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://www.walmart.com" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_b90525bf97c3410fae9bd81ba29c3715~mv2.png" alt="Walmart" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://www.target.com" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_17104a1dea7e48ab91d1e32c4cf29688~mv2.png" alt="Target" class="logo">
+        <span class="tooltip red">Coming Soon</span>
+      </a>
+      <a href="https://www.indiebound.org" target="_blank" class="logo-link">
+        <img src="https://static.wixstatic.com/media/a84819_89a9804597d14da1a6fd717982d87a2e~mv2.png" alt="IndieBound" class="logo">
+        <span class="tooltip blue">IndieBound</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
